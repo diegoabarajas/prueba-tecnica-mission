@@ -1,0 +1,9 @@
+requests
+pandas
+apscheduler
+python-dotenv
+loguru
+streamlit
+pytest
+requests-mock
+pytz
