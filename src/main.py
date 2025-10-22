@@ -20,7 +20,7 @@ def main():
         
         if datos:
             exchange_data = collector.collect_exchange_data(ciudad['moneda'])
-            
+            time_data = collector.collect_time_data(ciudad['timezone'])
             alertas = processor.evaluate_alerts(ciudad, datos['clima'])
             
             # Usar datos reales de exchange para el calculo de IVV
@@ -54,6 +54,10 @@ def main():
                 print(f"Tipo cambio: 1 USD = {exchange_data['tipo_cambio_actual']} {ciudad['moneda']}")
                 print(f"Variacion: {exchange_data['variacion_diaria']}%")
                 print(f"Tendencia: {exchange_data['tendencia_5_dias']}")
+                
+            if time_data:
+                print(f"Hora local: {time_data['hora_local']}")
+                print(f"Diferencia con Bogota: {time_data['diferencia_bogota']}")
             
             print(f"Alertas: {len(alertas)}")
             for alerta in alertas:

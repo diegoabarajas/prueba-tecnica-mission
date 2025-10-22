@@ -2,6 +2,7 @@ from logger import get_logger
 from api_clients.weather_client import WeatherClient
 from api_clients.exchange_client import ExchangeClient
 from datetime import datetime, timezone
+from api_clients.time_client import TimeClient
 
 logger = get_logger()
 
@@ -17,6 +18,7 @@ class DataCollector:
     def __init__(self):
         self.weather_client = WeatherClient()
         self.exchange_client = ExchangeClient()
+        self.time_client = TimeClient()
     
     def collect_city_data(self, ciudad):
         """Recolecta datos para una ciudad especifica"""
@@ -49,4 +51,12 @@ class DataCollector:
             }
         except Exception as e:
             logger.error(f"Error recolectando datos de cambio para {moneda}: {e}")
+            return None
+    
+    def collect_time_data(self, timezone):
+        """Recolecta datos de zona horaria"""
+        try:
+            return self.time_client.get_time_data(timezone)
+        except Exception as e:
+            logger.error(f"Error recolectando datos de tiempo para {timezone}: {e}")
             return None

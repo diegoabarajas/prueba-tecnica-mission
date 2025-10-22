@@ -1,0 +1,343 @@
+[
+  {
+    "timestamp": "2025-10-22T03:48:52.006233Z",
+    "ciudad": "Nueva York",
+    "clima": {
+      "temperatura_actual": 15.9,
+      "pronostico_7_dias": [
+        {
+          "fecha": "2025-10-21",
+          "temp_max": 19.9,
+          "temp_min": 9.1,
+          "precipitacion": 6
+        },
+        {
+          "fecha": "2025-10-22",
+          "temp_max": 16.3,
+          "temp_min": 10.6,
+          "precipitacion": 74
+        },
+        {
+          "fecha": "2025-10-23",
+          "temp_max": 14.6,
+          "temp_min": 7.3,
+          "precipitacion": 3
+        },
+        {
+          "fecha": "2025-10-24",
+          "temp_max": 15.0,
+          "temp_min": 8.6,
+          "precipitacion": 5
+        },
+        {
+          "fecha": "2025-10-25",
+          "temp_max": 14.3,
+          "temp_min": 7.8,
+          "precipitacion": 2
+        },
+        {
+          "fecha": "2025-10-26",
+          "temp_max": 14.3,
+          "temp_min": 7.9,
+          "precipitacion": 2
+        },
+        {
+          "fecha": "2025-10-27",
+          "temp_max": 12.7,
+          "temp_min": 6.7,
+          "precipitacion": 5
+        }
+      ],
+      "precipitacion": 0.0,
+      "viento": 12.6,
+      "uv": 0.0
+    },
+    "finanzas": {
+      "tipo_cambio_actual": 1,
+      "variacion_diaria": 0.81,
+      "tendencia_5_dias": "estable"
+    },
+    "alertas": [],
+    "ivv_score": 100.0,
+    "nivel_riesgo": "BAJO",
+    "componentes_ivv": {
+      "clima_score": 100,
+      "cambio_score": 100,
+      "uv_score": 100
+    }
+  },
+  {
+    "timestamp": "2025-10-22T03:48:55.803295Z",
+    "ciudad": "Londres",
+    "clima": {
+      "temperatura_actual": 9.5,
+      "pronostico_7_dias": [
+        {
+          "fecha": "2025-10-22",
+          "temp_max": 14.5,
+          "temp_min": 9.1,
+          "precipitacion": 93
+        },
+        {
+          "fecha": "2025-10-23",
+          "temp_max": 12.1,
+          "temp_min": 8.5,
+          "precipitacion": 95
+        },
+        {
+          "fecha": "2025-10-24",
+          "temp_max": 12.2,
+          "temp_min": 6.0,
+          "precipitacion": 35
+        },
+        {
+          "fecha": "2025-10-25",
+          "temp_max": 10.6,
+          "temp_min": 6.1,
+          "precipitacion": 16
+        },
+        {
+          "fecha": "2025-10-26",
+          "temp_max": 10.8,
+          "temp_min": 4.4,
+          "precipitacion": 26
+        },
+        {
+          "fecha": "2025-10-27",
+          "temp_max": 11.7,
+          "temp_min": 7.3,
+          "precipitacion": 38
+        },
+        {
+          "fecha": "2025-10-28",
+          "temp_max": 13.4,
+          "temp_min": 8.8,
+          "precipitacion": 15
+        }
+      ],
+      "precipitacion": 0.0,
+      "viento": 6.4,
+      "uv": 0.0
+    },
+    "finanzas": {
+      "tipo_cambio_actual": 0.748,
+      "variacion_diaria": 1.87,
+      "tendencia_5_dias": "estable"
+    },
+    "alertas": [],
+    "ivv_score": 100.0,
+    "nivel_riesgo": "BAJO",
+    "componentes_ivv": {
+      "clima_score": 100,
+      "cambio_score": 100,
+      "uv_score": 100
+    }
+  },
+  {
+    "timestamp": "2025-10-22T03:48:59.193155Z",
+    "ciudad": "Tokio",
+    "clima": {
+      "temperatura_actual": 11.9,
+      "pronostico_7_dias": [
+        {
+          "fecha": "2025-10-22",
+          "temp_max": 13.8,
+          "temp_min": 10.9,
+          "precipitacion": 98
+        },
+        {
+          "fecha": "2025-10-23",
+          "temp_max": 18.0,
+          "temp_min": 10.0,
+          "precipitacion": 45
+        },
+        {
+          "fecha": "2025-10-24",
+          "temp_max": 19.8,
+          "temp_min": 10.1,
+          "precipitacion": 15
+        },
+        {
+          "fecha": "2025-10-25",
+          "temp_max": 15.4,
+          "temp_min": 12.6,
+          "precipitacion": 29
+        },
+        {
+          "fecha": "2025-10-26",
+          "temp_max": 18.0,
+          "temp_min": 13.2,
+          "precipitacion": 81
+        },
+        {
+          "fecha": "2025-10-27",
+          "temp_max": 20.2,
+          "temp_min": 14.2,
+          "precipitacion": 54
+        },
+        {
+          "fecha": "2025-10-28",
+          "temp_max": 19.3,
+          "temp_min": 11.5,
+          "precipitacion": 3
+        }
+      ],
+      "precipitacion": 0.1,
+      "viento": 4.7,
+      "uv": 0.4
+    },
+    "finanzas": {
+      "tipo_cambio_actual": 151.51,
+      "variacion_diaria": -1.2,
+      "tendencia_5_dias": "estable"
+    },
+    "alertas": [],
+    "ivv_score": 100.0,
+    "nivel_riesgo": "BAJO",
+    "componentes_ivv": {
+      "clima_score": 100,
+      "cambio_score": 100,
+      "uv_score": 100
+    }
+  },
+  {
+    "timestamp": "2025-10-22T03:49:02.912301Z",
+    "ciudad": "São Paulo",
+    "clima": {
+      "temperatura_actual": 12.4,
+      "pronostico_7_dias": [
+        {
+          "fecha": "2025-10-22",
+          "temp_max": 22.9,
+          "temp_min": 11.2,
+          "precipitacion": 0
+        },
+        {
+          "fecha": "2025-10-23",
+          "temp_max": 24.5,
+          "temp_min": 11.9,
+          "precipitacion": 0
+        },
+        {
+          "fecha": "2025-10-24",
+          "temp_max": 25.8,
+          "temp_min": 13.1,
+          "precipitacion": 0
+        },
+        {
+          "fecha": "2025-10-25",
+          "temp_max": 29.1,
+          "temp_min": 13.5,
+          "precipitacion": 0
+        },
+        {
+          "fecha": "2025-10-26",
+          "temp_max": 32.2,
+          "temp_min": 16.7,
+          "precipitacion": 4
+        },
+        {
+          "fecha": "2025-10-27",
+          "temp_max": 28.1,
+          "temp_min": 20.3,
+          "precipitacion": 44
+        },
+        {
+          "fecha": "2025-10-28",
+          "temp_max": 21.9,
+          "temp_min": 16.2,
+          "precipitacion": 70
+        }
+      ],
+      "precipitacion": 0.0,
+      "viento": 7.6,
+      "uv": 0.0
+    },
+    "finanzas": {
+      "tipo_cambio_actual": 5.38,
+      "variacion_diaria": -0.42,
+      "tendencia_5_dias": "estable"
+    },
+    "alertas": [],
+    "ivv_score": 100.0,
+    "nivel_riesgo": "BAJO",
+    "componentes_ivv": {
+      "clima_score": 100,
+      "cambio_score": 100,
+      "uv_score": 100
+    }
+  },
+  {
+    "timestamp": "2025-10-22T03:49:06.786512Z",
+    "ciudad": "Sídney",
+    "clima": {
+      "temperatura_actual": 39.0,
+      "pronostico_7_dias": [
+        {
+          "fecha": "2025-10-22",
+          "temp_max": 39.1,
+          "temp_min": 17.2,
+          "precipitacion": 10
+        },
+        {
+          "fecha": "2025-10-23",
+          "temp_max": 22.0,
+          "temp_min": 14.5,
+          "precipitacion": 0
+        },
+        {
+          "fecha": "2025-10-24",
+          "temp_max": 25.9,
+          "temp_min": 11.8,
+          "precipitacion": 0
+        },
+        {
+          "fecha": "2025-10-25",
+          "temp_max": 25.7,
+          "temp_min": 13.9,
+          "precipitacion": 8
+        },
+        {
+          "fecha": "2025-10-26",
+          "temp_max": 26.7,
+          "temp_min": 15.1,
+          "precipitacion": 25
+        },
+        {
+          "fecha": "2025-10-27",
+          "temp_max": 22.1,
+          "temp_min": 11.3,
+          "precipitacion": 40
+        },
+        {
+          "fecha": "2025-10-28",
+          "temp_max": 14.9,
+          "temp_min": 9.1,
+          "precipitacion": 30
+        }
+      ],
+      "precipitacion": 0.0,
+      "viento": 35.2,
+      "uv": 6.15
+    },
+    "finanzas": {
+      "tipo_cambio_actual": 1.54,
+      "variacion_diaria": -2.03,
+      "tendencia_5_dias": "estable"
+    },
+    "alertas": [
+      {
+        "tipo": "CLIMA",
+        "severidad": "ALTA",
+        "mensaje": "Temperatura crítica: 39.0°C"
+      }
+    ],
+    "ivv_score": 82.5,
+    "nivel_riesgo": "BAJO",
+    "componentes_ivv": {
+      "clima_score": 75,
+      "cambio_score": 100,
+      "uv_score": 75
+    }
+  }
+]
