@@ -1,9 +1,18 @@
+# Librerías base del proyecto
 requests
 pandas
 apscheduler
 python-dotenv
 loguru
-streamlit
 pytest
 requests-mock
 pytz
+
+# Librerías para dashboard y visualización
+streamlit
+plotly
+
+# Librerías para Machine Learning
+scikit-learn
+numpy
+
