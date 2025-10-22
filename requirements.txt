@@ -15,4 +15,3 @@ plotly
 # Librerías para Machine Learning
 scikit-learn
 numpy
-
