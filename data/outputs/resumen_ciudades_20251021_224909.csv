@@ -1,6 +1,0 @@
-Ciudad,Timestamp,Temperatura,Viento,Precipitacion,UV,Tipo_Cambio,Variacion,Tendencia,IVV_Score,Nivel_Riesgo,Alertas_Count
-Nueva York,2025-10-22T03:48:52.006233Z,15.9,12.6,0.0,0.0,1,0.81,estable,100.0,BAJO,0
-Londres,2025-10-22T03:48:55.803295Z,9.5,6.4,0.0,0.0,0.748,1.87,estable,100.0,BAJO,0
-Tokio,2025-10-22T03:48:59.193155Z,11.9,4.7,0.1,0.4,151.51,-1.2,estable,100.0,BAJO,0
-São Paulo,2025-10-22T03:49:02.912301Z,12.4,7.6,0.0,0.0,5.38,-0.42,estable,100.0,BAJO,0
-Sídney,2025-10-22T03:49:06.786512Z,39.0,35.2,0.0,6.15,1.54,-2.03,estable,82.5,BAJO,1
