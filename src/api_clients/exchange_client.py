@@ -10,14 +10,26 @@ class ExchangeClient:
         self.base_url = "https://api.exchangerate-api.com/v4/latest/USD"
     
     def get_exchange_rates(self):
-        """Obtiene tipos de cambio actuales USD a otras monedas"""
+        """Obtiene tipos de cambio actuales USD a otras monedas con reintentos"""
+        # Usar una session con retry configurado para manejar reintentos y backoff
         try:
-            response = requests.get(self.base_url, timeout=10)
+            # Crear session local con Retry (si no existe self.session)
+            try:
+                session = self.session
+            except AttributeError:
+                from requests.adapters import HTTPAdapter
+                from urllib3.util.retry import Retry
+                import requests
+                session = requests.Session()
+                retries = Retry(total=3, backoff_factor=1, status_forcelist=[429, 500, 502, 503, 504])
+                session.mount("https://", HTTPAdapter(max_retries=retries))
+
+            response = session.get(self.base_url, timeout=10)
             response.raise_for_status()
             data = response.json()
-            
-            logger.info("API Exchange Rates respondio exitosamente")
-            return data['rates']
+
+            logger.info("API Exchange Rates respondió exitosamente")
+            return data.get('rates', {})
             
         except Exception as e:
             logger.error(f"Error API Exchange Rates: {e}")
