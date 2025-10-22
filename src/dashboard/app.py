@@ -202,3 +202,65 @@ st.plotly_chart(fig_componentes, use_container_width=True)
 # --- PIE DE PÁGINA ---
 st.markdown("---")
 st.markdown(f"*Última actualización: {ciudad_data['timestamp']}*")
+
+# =============================
+# SECCIÓN: PREDICCIÓN DE IVV
+# =============================
+import pandas as pd
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from ml_predictor import IVVPredictor
+import plotly.express as px
+
+st.header("Predicción de IVV (Machine Learning)")
+
+predictor = IVVPredictor()
+predicciones = predictor.predict_ivv()
+anomalias = predictor.detect_anomalies()
+
+if predicciones:
+    # Mostrar tabla de predicciones
+    st.subheader("Predicción estimada de IVV futuro por ciudad")
+    df_pred = pd.DataFrame(list(predicciones.items()), columns=["Ciudad", "IVV_Predicho"])
+    st.dataframe(df_pred, use_container_width=True)
+
+    # Mostrar gráfico histórico + predicción
+    st.subheader("Tendencia histórica del IVV con proyección futura")
+
+    # Cargar datos históricos
+    import glob, os
+    import pandas as pd
+    csv_files = glob.glob(os.path.join("data/outputs", "resumen_ciudades_*.csv"))
+    if csv_files:
+        df_hist = pd.concat([pd.read_csv(f, encoding='latin-1') for f in csv_files])
+        for city in df_pred["Ciudad"]:
+            sub = df_hist[df_hist["Ciudad"] == city].copy()
+            sub["Index"] = range(len(sub))
+            if not sub.empty:
+                st.markdown(f"##### {city}")
+                fig = px.line(sub, x="Index", y="IVV_Score", title=f"Histórico de IVV - {city}",
+                              labels={"Index": "Período", "IVV_Score": "IVV"})
+                fig.add_scatter(x=[len(sub)], y=[df_pred.loc[df_pred["Ciudad"] == city, "IVV_Predicho"].values[0]],
+                                mode="markers+text", name="Predicción",
+                                text=["Predicción"], textposition="top center",
+                                marker=dict(color="red", size=10))
+                st.plotly_chart(fig, use_container_width=True)
+
+    # Mostrar anomalías detectadas
+    if not anomalias.empty:
+        st.warning("Se detectaron comportamientos anómalos en el IVV:")
+        st.dataframe(anomalias, use_container_width=True)
+    else:
+        st.success("No se detectaron anomalías significativas en los datos históricos.")
+
+# --- BOTÓN DE RECALCULAR PREDICCIONES ---
+st.markdown("---")
+if st.button("Recalcular Predicciones ML"):
+    with st.spinner("Entrenando modelo y recalculando IVV..."):
+        predicciones = predictor.predict_ivv()
+        anomalias = predictor.detect_anomalies()
+    st.success("Predicciones actualizadas correctamente.")
+    st.rerun()
+
+else:
+    st.warning("No se encontraron suficientes datos históricos para generar predicciones.")
